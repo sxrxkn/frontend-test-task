@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="bg.webp" as="image" fetchpriority="high" />
+    <title>Pineapplepen - скоро открытие</title>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        background: #d98523 url("bg.webp") no-repeat 50% 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding: 4rem 1rem;
+        flex: 1;
+      }
+
+      .hero__content {
+        max-width: 480px;
+        margin: 3rem auto;
+      }
+
+      .hero__title {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        font-weight: 400;
+      }
+
+      .hero__text {
+        font-size: 1.25rem;
+      }
+
+      .page-footer {
+        padding: 1rem;
+      }
+
+      .page-footer__text {
+        color: #6c757d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero__content">
+        <div class="hero__title">Pineapplepen</div>
+        <div class="hero__text">
+          Нужно будет постараться, чтобы забыть то, что вы здесь увидите.
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div>
+        <span class="page-footer__text"
+          >Невероятный личный опыт, восхитительное удовольствие.
+          <a href="#">Pineapplepen</a>.</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

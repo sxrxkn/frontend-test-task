@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #111;
+  background: #fff;
+}
+
+.buttons {
+  box-sizing: border-box;
+  width: 810px;
+  min-height: 287px;
+  padding: 36px 49px;
+}
+
+.button-states {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 19px;
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.button {
+  --button-color: #222;
+  --button-text-shadow: 0 1px #fff;
+  --button-bg: linear-gradient(#f9f9f9, #e9e9e9);
+  --button-border-width: 1px;
+  --button-border-color: #b8b8b8;
+  --button-shadow: inset 0 1px #fff;
+  --button-hover-bg: linear-gradient(#fff, #f1f1f1);
+  --button-active-bg: linear-gradient(#dcdcdc, #eeeeee);
+  --button-active-shadow: inset 0 1px 3px #bdbdbd;
+  --button-disabled-color: #999;
+  --button-disabled-bg: linear-gradient(#f4f4f4, #ececec);
+  --button-disabled-border-color: #d5d5d5;
+
+  box-sizing: border-box;
+  min-width: 102px;
+  height: 32px;
+  padding: 0 13px;
+  font: inherit;
+  color: var(--button-color);
+  text-align: center;
+  text-shadow: var(--button-text-shadow);
+  white-space: nowrap;
+  background: var(--button-bg);
+  border: var(--button-border-width) solid var(--button-border-color);
+  border-radius: 4px;
+  box-shadow: var(--button-shadow);
+  cursor: pointer;
+}
+
+.button:hover:not(:disabled),
+.button-hover {
+  background: var(--button-hover-bg);
+  border-color: var(--button-hover-border-color, var(--button-border-color));
+}
+
+.button:active:not(:disabled),
+.button-active {
+  background: var(--button-active-bg);
+  border-color: var(--button-active-border-color, var(--button-border-color));
+  box-shadow: var(--button-active-shadow);
+}
+
+.button:disabled {
+  color: var(--button-disabled-color);
+  text-shadow: var(--button-disabled-text-shadow, var(--button-text-shadow));
+  background: var(--button-disabled-bg);
+  border-color: var(--button-disabled-border-color);
+  cursor: default;
+}
+
+.button-red-outline {
+  --button-color: #111;
+  --button-bg: #f5f5f5;
+  --button-border-width: 2px;
+  --button-border-color: #e5241b;
+  --button-shadow: none;
+  --button-hover-bg: #fff;
+  --button-active-bg: #d7d7d7;
+  --button-active-shadow: inset 0 1px 2px #b5b5b5;
+  --button-disabled-color: #888;
+  --button-disabled-bg: #efefef;
+  --button-disabled-border-color: #d3d3d3;
+}
+
+.button-red {
+  --button-color: #fff;
+  --button-text-shadow: 0 -1px rgba(0, 0, 0, 0.35);
+  --button-bg: #dc2119;
+  --button-border-color: #dc2119;
+  --button-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
+  --button-hover-bg: #f2362d;
+  --button-hover-border-color: #f2362d;
+  --button-active-bg: #a91310;
+  --button-active-border-color: #a91310;
+  --button-active-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  --button-disabled-color: #fff;
+  --button-disabled-text-shadow: none;
+  --button-disabled-bg: #eca1a0;
+  --button-disabled-border-color: #eca1a0;
+
+  font-weight: 700;
+}
+
+.button-arrow {
+  position: relative;
+  padding-right: 22px;
+}
+
+.button-arrow::after {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  margin-top: -4px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 5px solid #cf1510;
+  content: "";
+}
+
+.button-arrow:disabled::after {
+  border-left-color: #c8c8c8;
+}
+
+.button-green {
+  --button-color: #fff;
+  --button-text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  --button-bg: #6da33a;
+  --button-border-color: #6da33a;
+  --button-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
+  --button-hover-bg: #79b744;
+  --button-hover-border-color: #79b744;
+  --button-active-bg: #4e7d2c;
+  --button-active-border-color: #4e7d2c;
+  --button-active-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+  --button-disabled-color: #fff;
+  --button-disabled-text-shadow: none;
+  --button-disabled-bg: #98b67f;
+  --button-disabled-border-color: #98b67f;
+
+  font-weight: 700;
+}
+
+.button-green-outline {
+  --button-bg: #f5f5f5;
+  --button-border-width: 2px;
+  --button-border-color: #4e7d2c;
+  --button-shadow: none;
+  --button-hover-bg: #fff;
+  --button-active-bg: #dfe8d9;
+  --button-active-shadow: inset 0 1px 2px #b5b5b5;
+  --button-disabled-color: #888;
+  --button-disabled-bg: #efefef;
+  --button-disabled-border-color: #d3d3d3;
+}
